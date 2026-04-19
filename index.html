@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	  <style>
+        
+        body {
+            background-color: #f0f5e5;
+            font-family: "Arial", sans-serif;
+            color: #795548;
+            margin: 0;
+            padding: 20px;
+            background-image: url(images/bg.png); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+
+        }
+
+        h1 {
+  max-width: 1000px;
+    text-align: center;
+    font-size: 50px;
+    color: #fffae6;
+    letter-spacing: 5px; 
+          
+    margin-top: 50px;
+
+            padding:30px;
+            background-color:#7294c3; 
+         
+              text-align: center;
+                font-size:100px ; 
+                margin-bottom: 0;
+                margin-left: auto;
+                margin-right: auto;
+
+        }
+         nav {
+              max-width: 1000px;
+             background-color:#9fb8df; 
+            text-align: center;
+            margin-bottom: 10px;
+                 padding:30px;
+                   margin-left: auto;
+                margin-right: auto;
+        }
+          nav a
+         {
+           color: #fffae6;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 25px;
+         padding:30px;
+        }
+        nav a:hover {
+            color: #d2dc7b;
+        }
+        
+          .welcome {
+    max-width: 1000px; 
+    margin: 0 auto 60px auto; 
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 30px; 
+}
+
+.welcome h2 {
+	padding:10px;
+	   text-align: Left;
+	   border-left: 6px solid #acd0df; 
+    font-size: 30px;
+    color: #acd0df; 
+   
+}
+
+.welcome h3 {
+    padding:10px;
+       text-align: Left;
+     
+    font-size: 20px;
+    color: #acd0df; 
+   
+}
+
+.welcome-content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 40px; 
+    align-items: center; 
+
+
+}
+
+.welcome-content img {
+    width: 100%; 
+    border-radius: 20px;
+}
+
+.welcome-content img:hover {
+   width: 130%; 
+   height: 130%;
+   
+    }
+
+.welcome-content .intro {
+    text-align: left; /* 简介文字靠左对齐，方便阅读 */
+    font-size: 15px;
+    font-weight:bold ;
+    line-height: 1.6;
+    color: #7294c3; 
+    letter-spacing: 2px; 
+    overflow: auto;
+ 
+}
+
+
+.villagers {
+    max-width: 1000px; 
+    margin: 0 auto 60px auto; 
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 30px; 
+}
+.villagers h2 {
+	padding:10px;
+	   text-align: Left;
+	   border-left: 6px solid #acd0df; 
+    font-size: 30px;
+    color: #acd0df; 
+   
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px; 
+    align-items: center; 
+}
+
+.villager-card {
+    background-color: #fcf3b6; 
+    border-radius: 30px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); 
+}
+
+.villager-card img {
+    width: 200px; 
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+
+.Name{
+    background-color:  #ddebd8; 
+    color: #4a6b32; 
+    font-size: 50px;
+    font-weight: bold;
+    padding: 8px 30px; 
+    border-radius: 30px; /* 圆角足够大，就变成了胶囊形 */
+    display: inline-block; /* 让牌子只包住文字，不要拉满整行 */
+    margin-bottom: 20px;
+}
+
+
+.info-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+gap:3px ;
+    margin-bottom: 10px;
+}
+
+
+.Gender {
+    background-color: #ddebd8;
+    color: #a8d37a; 
+    padding: 5px;
+    border-radius: 15px;
+    font-size: 20px;
+   }
+
+
+.PersonalityBirthday {
+	    background-color: #ddebd8;
+    color: #a8d37a; 
+    margin-bottom: 10px;
+ 
+}
+.catchphrase {
+    margin-bottom: 10px;
+       background-color: #ddebd8;
+    color: #a8d37a; 
+}
+
+
+.span-all {
+    grid-column: 1 / 5; 
+}
+
+
+  .events {
+    max-width: 1000px; 
+    display: grid;
+    margin: 0 auto 60px auto; 
+    background-color: rgba(255, 255, 255, 0.8);
+    gap: 5px;
+    padding: 30px;
+    border-radius: 30px; 
+    grid-template-columns: 1fr 1fr 2fr 1.5fr; 
+}
+
+
+    .events h2 {
+    padding:10px;
+       text-align: Left;
+       border-left: 6px solid #acd0df; 
+    font-size: 30px;
+    color: #acd0df; 
+   }
+
+.event-header {
+    background-color: #acd0df;
+    color: white;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.event-row {
+    padding: 20px;
+    display: flex;
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    text-align: center;
+    font-size: 18px;
+    border-bottom: 1px solid #eee;
+}
+
+
+.event-row img{
+    width: 100%;
+    max-width: 150px;
+    border-radius: 5px;
+}
+
+/* 悬停效果：不再是整行变色，而是更细腻的反馈 */
+.event-row:hover {
+    background-color: #f9fdf2;
+}
+
+
+
+
+
+.item  {
+    max-width: 1000px; 
+    margin: 0 auto 60px auto; 
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 30px; 
+}
+
+
+    .item h2 {
+    padding:10px;
+       text-align: Left;
+       border-left: 6px solid #acd0df; 
+    font-size: 30px;
+    color: #acd0df; 
+   }
+
+
+
+.item-big-item { grid-area: big; }
+.item-small-1 { grid-area: s1; }
+.item-small-2 { grid-area: s2; }
+.item-small-3 { grid-area: s3; }
+.item-small-4 { grid-area: s4; }
+.item-small-5 { grid-area: s5; }
+
+.item-grid {
+    display: grid;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 20px; 
+    grid-template-areas: 
+        "big big s1" 
+        "big big s2"  
+        "s3  s4  s5";
+    grid-template-columns: 1fr 1fr 1fr; 
+}
+
+.item-grid  div {
+    background-color: #fcf3b6; 
+
+    border-radius: 20px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.item-grid img {
+    max-width: 100%;
+    height:  100%;
+    object-fit: cover;
+   
+}
+
+/
+.item-big-item img {
+    max-height: auto;
+}
+
+.item-big-item p {
+    font-size: 30px;
+    font-weight: bold;
+    color: #8bc34a;
+    margin: 15px 0 5px 0; 
+}
+
+
+.item-grid p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #7294c3;
+    margin: 10px 0 0 0;
+}
+
+
+</style>
+
+
+</head>
+
+<body>
+
+<h1>Animal Crossing 
+Community Center</h1>
+  <nav>
+        <a href="index.html">Home</a>
+        <a href="villager.html">List of villagers</a>
+         <a href="activities.html">Recent Activities</a>
+        <a href="moment.html">Island Moments</a>
+      
+    </nav>
+
+
+    <section class="welcome">
+    <h2>Animal Crossing</h2> 
+    <div class="welcome-content">
+        <img src="images\intro.png" alt="我的照片"> 
+        
+        <div class="intro">
+            <p>Animal Crossing is a heartwarming life-simulation game where players live in a peaceful town inhabited by charming animal neighbors. In my virtual community center, these adorable animals are not just NPCs, but my cherished neighbors, fostering a sense of warmth and togetherness that defines the spirit of home.
+</p>
+        </div>
+    </div>
+
+  <div>
+    <h3 >Is there anything you'd like to add to this introduction section??</h3> 
+   <div class="welcome-content">
+        <img src="images\amlogo.png" alt="我的照片"> 
+        
+        <div class="intro">
+         
+         <table >
+        <form>          
+       
+        <tr>
+                <td colspan="2">
+                    <textarea rows ="4" cols ="90">For example:Could you add a section for sharing Turnip prices?
+</textarea >
+                
+
+                </td>
+        </tr>   
+            
+
+        <tr>
+                <td >
+                    <input type="reset" value="Clear Form">
+
+                </td>
+                <td >
+                    <input type="button" value="Submit Form ">
+
+                </td>
+            
+                
+        </tr>   
+
+            </form> 
+
+</table>   
+
+  </div>
+        </div>
+  
+
+</section>
+
+
+
+<section class="villagers">
+    <h2>villagers</h2> 
+ <div class="gallery">
+
+   <div class="villager-card">
+        <img src="images\pingguo.png" alt="Chai">
+        
+        <div class="Name">Apple</div>
+        
+        <div class="info-row">
+            <div class="Gender">Hamster</div>
+            <div class="Gender">Female</div>
+        </div>
+        
+        <div class="	PersonalityBirthday	">Birthday:September 24th</div>
+        
+        <div class="	catchphrase	">Catchphrase:cheekers</div>
+        
+    </div>
+
+   <div class="villager-card">
+        <img src="images\pingguo.png" alt="Chai">
+        
+        <div class="Name">Apple</div>
+        
+        <div class="info-row">
+            <div class="Gender">Hamster</div>
+            <div class="Gender">Female</div>
+        </div>
+        
+        <div class="    PersonalityBirthday ">Birthday:September 24th</div>
+        
+        <div class="    catchphrase ">Catchphrase:cheekers</div>
+        
+    </div>
+
+   <div class="villager-card">
+        <img src="images\pingguo.png" alt="Chai">
+        
+        <div class="Name">Apple</div>
+        
+        <div class="info-row">
+            <div class="Gender">Hamster</div>
+            <div class="Gender">Female</div>
+        </div>
+        
+        <div class="    PersonalityBirthday ">Birthday:September 24th</div>
+        
+        <div class="    catchphrase ">Catchphrase:cheekers</div>
+        
+    </div>
+
+  </div>
+  <div>
+  
+   <div class="welcome-content">
+        <img src="images\fish1.png" alt="我的照片"> 
+        
+        <div class="intro">
+         
+         <table >
+        <form>          
+       
+      <tr>
+                <td >Who is your absolute favorite villager?</td>
+                        </tr> 
+                          <tr>
+                <td >
+                    <input type ="text"
+                    
+                    placeholder="Apple?" 
+                    required 
+                    autofocus>
+                </td>
+                
+        </tr>  
+
+            </form> 
+
+</table>   
+
+  </div>
+        </div>
+  
+
+</section>
+
+
+
+
+
+    
+<section class="events">
+
+    <h2 class="span-all" >Recent Activities</h2>
+
+        <div class="event-header">Image</div>
+        <div class="event-header">Host</div>
+        <div class="event-header">Date</div>
+        <div class="event-header">Time</div>
+
+            <div class="event-row"><img src="images\fishing.png" alt="C.J."></div>
+            <div class="event-row">Chip<br>Tortimer<br>C.J.</div>
+            <div class="event-row">The Summer Fishing Tourney (June & November)</div>
+            <div class="event-row">6AM—6PM<br>12PM—6PM<br>9AM–6PM</div>
+    
+      
+      <h3 class="span-all">Any other suggestions? :</h3>
+
+      <div class="span-all">
+      
+            <label for="fav-activity">Favorite Activity:</label>
+            <select class="span-all" name="fav_activity">
+                <option value="fishing" selected>Fishing Tourney </option>
+                <option value="bug">Bug-Off </option>
+                <option value="fireworks">Fireworks Show </option>
+                <option value="kk">K.K. Concert </option>
+            </select>
+         </div>
+          <div class="span-all">
+            <label for="join-time">Preferred Time :</label>
+            <input type="time" id="join-time" name="join_time">
+      
+    </div>
+
+    <div class="span-all">
+               <textarea id="suggestions" name="suggestions" rows="4" cols="100" placeholder="e.g. We should have a fashion show!"></textarea>
+    </div>
+
+</section>
+
+
+<section class="item">
+    <h2>Island Moments</h2>
+    <div class="item-grid">
+        <div class="item-big-item">
+            <img src="images\moment.png">
+            <p>Froggy Chair</p>
+        </div>
+
+         <div class="item-small-1">
+            <img src="images\moment.png">
+            <p>Froggy Chair</p>
+        </div>
+
+         <div class="item-small-2">
+            <img src="images\moment.png">
+            <p>Froggy Chair</p>
+        </div>
+
+ <div class="item-small-3">
+            <img src="images\moment.png">
+            <p>Froggy Chair</p>
+        </div>
+
+         <div class="item-small-4">
+            <img src="images\moment.png">
+            <p>Froggy Chair</p>
+        </div>
+         <div class="item-small-5">
+            <img src="images\moment.png">
+            <p>Froggy Chair</p>
+        </div>
+        
+
+
+    </div>
+
+     <div class="span-all">
+                <h3 class="span-all" >Show off your favorite snapshot!</h3>
+                <div >
+                    <input type ="file"
+                    placeholder="Choose File" >
+
+
+                </div>
+            
+                
+        </div>
+</section>
+
+ <section class="welcome">
+    <h2>Do you like this website?</h2> 
+    <div class="welcome-content">
+        <img src="images\amlogo.png" alt="我的照片"> 
+        
+        <div class="intro">
+         
+         <table >
+        <form>          
+        <tr>
+                <td >First Name</td>
+                <td >
+                    <input type ="text"
+                    
+                    placeholder="Enter your name" 
+                    required 
+                    autofocus>
+                </td>
+                
+        </tr>
+        <tr>
+                <td >Last Name</td>
+                <td >
+                    <input type ="text"
+                
+                    placeholder="Enter last name" 
+                    required 
+                    autofocus>
+                </td>
+                
+        </tr>
+
+     
+        <tr>
+                <td >Date of Birth</td>
+                <td >
+                    <input type ="date">
+                    
+                    
+                </td>
+                
+        </tr>
+        <tr>
+                <td >Time of Birth</td>
+                <td >
+                    <input type ="time">
+                </td>
+                
+        </tr>
+
+   <tr>
+                <td >How old are you?</td>
+                <td >
+                    <input type ="number" min ="1" max ="50">
+                </td>
+                
+        </tr>
+        <tr>
+                <td >Email Address</td>
+                <td >
+                    <input type ="email"
+                    placeholder="example@gmail.com" >
+                </td>
+                
+        </tr>
+        <tr>
+                <td >Phone Number</td>
+                <td >
+                    <input type ="tel"
+                    placeholder="+1 234 567 890" >
+                </td>
+                
+        </tr>
+
+        <tr>
+                <td >Gender</td>
+                <td >
+                    <input type ="radio" name="Gender">
+                    Male 
+                
+                <input type ="radio" name="Gender">
+                    Female 
+                
+                <input type ="radio" name="Gender">
+                    Other 
+                </td >
+        </tr>
+        <tr>
+                <td rowspan="3" >What brings you to our island community today?</td>
+                <td >
+                    <input type ="checkbox" >
+                   Active Players                
+                </td >
+        </tr>
+        <tr>
+                
+                <td >
+                    <input type ="checkbox" >
+                  Curious Visitors/Potential Players
+                
+                </td >
+        </tr>
+            <tr>
+                
+                <td >
+                    <input type ="checkbox" >
+                Technical Peers/Instructors
+                </td >
+        </tr>
+           
+
+        <tr>
+                <td >How much do you like my website?</td>
+                <td >
+                    <input type ="range" min ="1" max ="10">
+                
+                </td>
+                
+        </tr>
+        <tr>
+                <td >Which part is your favorite?</td>
+                <td >
+                    <select>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>   
+                </td>
+                
+        </tr>
+     
+        <tr>
+                <td >Show off your favorite snapshot!</td>
+                <td >
+                    <input type ="file"
+                    placeholder="Choose File" >
+
+
+                </td>
+            
+                
+        </tr>
+        <tr>
+                <td >Any ideas to improve our community center?</td>
+                <td >
+                    <textarea rows ="4" cols ="45">Could you add a section for sharing Turnip prices?
+</textarea >
+                
+
+                </td>
+        </tr>   
+            
+
+        <tr>
+                <td >
+                    <input type="reset" value="Clear Form">
+
+                </td>
+                <td >
+                    <input type="button" value="Submit Form ">
+
+                </td>
+            
+                
+        </tr>   
+
+            </form> 
+
+</table>   
+
+
+        </div>
+    </div>
+</section>
+
+
+
+</body>
+</html>

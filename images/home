@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="En">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		
+	</title>
+  <style>
+	     h1 {
+  max-width: 1000px;
+    text-align: center;
+    font-size: 50px;
+    color: #fffae6;
+    letter-spacing: 5px; 
+          
+    margin-top: 50px;
+
+            padding:30px;
+            background-color:#7294c3; 
+         
+              text-align: center;
+                font-size:100px ; 
+                margin-bottom: 0;
+                margin-left: auto;
+                margin-right: auto;
+
+        }
+         nav {
+              max-width: 1000px;
+             background-color:#7294c3; 
+            text-align: center;
+            margin-bottom: 10px;
+                 padding:30px;
+                   margin-left: auto;
+                margin-right: auto;
+        }
+        nav a {
+           color: #fffae6;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 30px;
+         padding:50px;
+        }
+        nav a:hover {
+            color: #d2dc7b;
+        }
+            </style>
+</head>
+
+<body>
+	<h1>Animal Crossing Community Center</h1>
+    
+  <nav>
+
+        <a href="D:\2026.3\final\1.html">List of villagers</a>
+         <a href="D:\2026.3\final\2.html">Recent Activities</a>
+        <a href="D:\2026.3\final\3.html">Island Moments</a>
+      
+    </nav>
+
+
+
+</body>
+</html>
